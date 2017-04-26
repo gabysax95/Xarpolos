@@ -1,0 +1,587 @@
+/*general*/
+
+body{
+   
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+
+#gg{
+    font-size: 17px;
+    text-align: left;
+}
+
+#st{
+    font-family: sans-serif;
+    font-style: oblique;
+    color:blue;
+    font-size: 0px;
+}
+
+
+
+@media(max-width:650px){
+    #st{
+    font-family: sans-serif;
+    font-style: oblique;
+    color:blue;
+    font-size: 12px;
+}
+    
+}
+
+
+
+h1{
+    text-align: center;
+    font-family:sans-serif;
+}
+
+h2{
+    text-align: center;
+    color:darkred;
+    font-family:sans-serif;
+}
+
+h4{
+  text-align: center;
+    color:crimson;
+       font-family:sans-serif;
+}
+
+
+h5{
+    color:gray;
+}
+
+
+p{
+	font-family:Garamond;
+	text-align: center;
+	color:gray;
+    font-size: 50px;
+    
+}
+
+/*para menu*/
+
+
+.clearfix:after {
+content: "";
+display: table;
+}
+
+
+
+.menu li:hover ul{
+    opacity:1;
+	visibility:visible;
+}
+
+.menu ul li a{
+	border-bottom:2px solid #333;
+	border-left:none;
+	display:block;
+	text-align:left;
+}
+
+.menu{
+    list-style:none;
+	padding:0px;
+	margin:0px;
+}
+
+
+
+
+
+
+/*
+*/
+
+header{
+    width: 100%;
+    background: #4E94AB;
+    
+}
+
+#btn-menu{
+    display: none;  
+}
+
+
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+header lable:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;   
+    justify-content:  center;
+}
+
+.menu li {
+   text-align: center;
+   flex-grow: 1;
+}
+
+.menu li:hover{
+    background: rgba(0,0,0,0.3)
+}
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media(max-width:768px){
+    
+    header label{
+        display: block;
+    }
+    
+    .menu{
+        position:absolute;
+        float:left;
+        background: #4E94AB;
+        width:40%;
+        margin-left: -40%;
+        transition: all 0.5s;
+        z-index:10;
+        
+        }
+    .menu ul{
+        flex-direction: column;
+    
+        
+    }
+    .menu li{
+        border-top: 1px solid #fff;
+    }
+    
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+}
+    
+
+/*SUPER SLIDER */
+
+* {margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+html, body {height: 100%;
+    width: 100%; 
+    font-family: sans-serif;
+    }
+
+
+.cont-slider {
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+    width: auto;
+    min-width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider {
+    animation: deslizante 18s ease-out 0s backwards infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500%;
+    height: 100%;
+}
+.slide {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 20%;
+    height: 100%;    
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.slide span {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0 5vh 5vh 0;
+    color: #FFF;
+    position: absolute;
+    left: 0;
+    top: 40vh;
+    font-size: 11vh;
+    line-height: 13vh;
+    border: 1px solid rgba(255,255,255,.45);
+    border-left: 0 none;
+}
+
+.uno {
+  background-image: url(https://static.betazeta.com/www.belelu.com/up/2014/12/mujeres-de-compras-960x623.jpg);}
+.dos {
+  background-image: url(http://i0.wp.com/onethousandshoes.es/wp-content/uploads/2015/01/Moda-22_2.jpg);}
+.tres {
+  background-image: url(https://static.betazeta.com/www.belelu.com/up/2015/05/5211779921_1719f99a3e_b-960x623.jpg);}
+.cuatro {
+  background-image: url(http://static.lared.cl/wp-content/uploads/2016/02/shutterstock_184342208.jpg);}
+.cinco {
+  background-image: url(https://makia.la/wp-content/uploads/2015/06/11160453_865891826815628_986404035_n1.jpg);}
+
+@keyframes deslizante {
+  0% {left: 0%; }
+  15% {left: 0%; }
+  20% {left: -100%; }
+  35% {left: -100%; }
+  40% {left: -200%; }  
+  55% {left: -200%; }
+  60% {left: -300%; }
+  75% {left: -300%; }
+  80% {left: -400%; }
+  95% {left: -400%; }   
+  100% {left: 0; }
+}
+
+
+@media(max-width:768px){
+    .slider {
+        top: 0; 
+    left: 0px;
+    }
+    
+    .slide span{
+         top: 50vh;
+    font-size: 8vh;
+    line-height: 10vh;
+        
+    }
+}
+
+
+@media(max-width:650px){
+    .slider {
+        top: 0; 
+    left: 0px;
+    }
+    
+    .slide span{
+         top: 45vh;
+    font-size: 7vh;
+    line-height: 9vh;
+        
+    }
+    
+}
+    
+
+    
+/*PARA GALERIA DE ROPA*/
+
+.galeria{
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 35px;
+    box-sizing:border-box;
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galeria li{
+    margin: 3px;
+    
+}
+
+.galeria img{
+    margin-right: 30px; 
+    margin-bottom: 10px;
+    width: 180px;
+    height: 180px;
+ border-radius: 43px 43px 43px 43px;
+border: 8px solid #034859;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.galeria img:hover{
+    height: 230px;
+    width: 230px;
+}
+
+
+@media(max-width:768px){
+    .galeria img{
+    margin-right: 30px; 
+    margin-bottom: 6px;
+   margin-left: 10px; 
+    width: 200px;
+    height: 200px;
+ border-radius: 43px 43px 43px 43px;
+border: 7px solid #034859;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;    
+    }
+    
+    .galeria li{
+    margin: 1px;
+    }
+    
+    .galeria img:hover{
+    height: 220px;
+    width: 220px;
+    }  
+}
+
+
+@media(max-width: 650px){
+    
+    .galeria img{
+
+    margin-right: 0px; 
+    margin-bottom: 6px;
+    margin-left: 0px; 
+    width: 82px;
+    height: 82px;
+ border-radius: 43px 43px 43px 43px;
+border: 6px solid #034859;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;    
+    }
+    
+    .galeria li{
+    margin: 2px;
+    }
+    
+    .galeria img:hover{
+    height: 82px;
+    width: 82px;
+
+}
+    
+}
+
+    
+
+/*Mision y vision*/
+
+#textoq1{
+     text-align: center;
+    margin-left: 12px;
+    margin-top: 60px;
+    margin-right: 12px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#textoq2{
+ text-align: center;
+    margin-left: 12px;
+    margin-top: 60px;
+    margin-right: 12px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#textoq3{
+     text-align: center;
+    margin-left: 12px;
+    margin-top: 60px;
+    margin-right: 12px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+@media(max-width:650px){
+    #textoq1{
+        font-size: 12px;    
+    }
+    
+    #textoq2{
+         font-size: 12px;  
+        
+    }
+    
+    #textoq3{
+         font-size: 12px;
+    }
+    
+}
+
+#qs{
+        margin-top: 30px;
+    
+}
+
+#logo{
+    
+    margin-top: 15px;
+    width: 350px;
+    height: 200px;
+}
+
+
+@media(max-width:650px){
+     width: 300px;
+    height: 150px;
+    
+}
+    
+
+
+
+/*FORMULARIO*/
+
+
+.contacto{
+    border: 1px solid #CED5D7;
+    border-radius: 2px;
+    padding: 50px 25px 10px;
+    margin-top: auto;
+    background-color: white;
+    box-shadow: 10px 5px 10px #B5C1C5, 0 0 0 12px #EEF5F7 inset;
+}
+.contacto label{
+    display: block;
+    font-weight: bold;
+}
+.contacto div{
+    margin-bottom: 25px;
+    /*MARGEN ENTRE CASILLAS*/
+}
+.contacto input[type='text'], .contacto textarea{
+    padding: 7px 6px;
+    width: 294px;
+    border: 1px solid #CED5D7;
+    resize: none;
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+.contacto input[type='text']:focus, .contacto textarea:focus{
+    outline: none;
+    box-shadow:0 0 0 3px #dde9ec;
+}
+.contacto input[type='submit']{
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 
+    background: #e4f1f6;
+    background: -moz-linear-gradient(top, #e4f1f6 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #e4f1f6 0%,#cfe6ef 100%);
+}
+.contacto input[type='submit']:hover{
+    background: #edfcff;
+    background: -moz-linear-gradient(top, #edfcff 0%, #cfe6ef 100%);
+    background: -webkit-linear-gradient(top, #edfcff 0%,#cfe6ef 100%);
+}
+.contacto input[type='submit']:active{
+    background: #cfe6ef;
+    background: -moz-linear-gradient(top, #cfe6ef 0%, #edfcff 100%);
+    background: -webkit-linear-gradient(top, #cfe6ef 0%,#edfcff 100%);
+}
+
+
+
+
+/*google bar*/
+
+
+.barra {
+        border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+  }
+
+.barra INPUT{
+    background-color: #4E94AB;
+    color: white;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 19px;    
+}
+
+
+.barra img{
+    width: 38px;
+    height: 38px;
+}
+
+
+@media(max-width:768px){
+    .barra img{
+    width: 35px;
+    height: 35px;
+}
+    
+    .barra INPUT{
+    background-color: #4E94AB;
+    color: white;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 17px;
+    }
+    
+}
+
+
+@media(max-width:650px){
+    .barra img{
+    width: 32px;
+    height: 32px;
+}
+    
+    .barra INPUT{
+    background-color: #4E94AB;
+    color: white;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    }
+    
+}
+#gif img{
+     margin-top: 10px;
+     border-radius: 43px 43px 43px 43px;
+border: 6px solid #034859;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;  
+     
+}
+
+
+
+
+
+
+
+    
+
+
